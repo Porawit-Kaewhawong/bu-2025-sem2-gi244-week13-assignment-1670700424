@@ -21,6 +21,9 @@ public class SpawnManager : MonoBehaviour
 
         int random = Random.Range(0, 3);
         var go = ObstacleObjectPool.instance.Acquire(random);
-        go.transform.SetPositionAndRotation(spawnPoint.position, spawnPoint.rotation);
+        if (go != null)
+        {
+            go.transform.SetPositionAndRotation(spawnPoint.position, spawnPoint.rotation);
+        }
     }
 }

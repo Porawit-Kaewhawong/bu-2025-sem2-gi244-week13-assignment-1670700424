@@ -7,6 +7,7 @@ public class ObstacleObjectPool : MonoBehaviour
     public GameObject obstacleBarrelPrefab;
     public GameObject obstacleBarrierPrefab;
     public GameObject obstacleStoneWallPrefab;
+
     public int poolSize = 10;
 
     private List<GameObject> obstacleBarrelPool;
@@ -78,8 +79,8 @@ public class ObstacleObjectPool : MonoBehaviour
         return null;
     }
 
-    public void Release(GameObject obstacle, int obstacleType)
+    public void Release(GameObject obstacle)
     {
-
+        obstacle.SetActive(false);
     }
 }
